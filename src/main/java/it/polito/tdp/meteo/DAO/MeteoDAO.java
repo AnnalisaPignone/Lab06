@@ -25,7 +25,7 @@ public class MeteoDAO {
 
 			while (rs.next()) {
 
-				Rilevamento r = new Rilevamento(rs.getString("Localita"), rs.getDate("Data"), rs.getInt("Umidita"));
+				Rilevamento r = new Rilevamento(rs.getString("Localita"), rs.getDate("Data").toLocalDate(), rs.getInt("Umidita"));
 				rilevamenti.add(r);
 			}
 
@@ -40,7 +40,6 @@ public class MeteoDAO {
 	}
 
 	public List<Rilevamento> getAllRilevamentiLocalitaMese(int mese, String localita) {
-
 		return null;
 	}
 
